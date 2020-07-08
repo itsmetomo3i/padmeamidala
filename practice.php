@@ -15,3 +15,11 @@ $tech_boost = "tech";
 $tech_boost .= " boost";
 echo $tech_boost;
 echo "\n";
+
+$height = 160;
+
+if ($height > 140){
+    echo "150cm 未満の方はご乗車できません。";
+} else {
+    echo "ご乗車になれます。";
+}
