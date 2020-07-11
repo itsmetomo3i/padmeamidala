@@ -23,3 +23,8 @@ if ($height > 140){
 } else {
     echo "ご乗車になれます。";
 }
+echo "\n";
+//name変数を定義して、文字列をドットでつなげる
+$name = "山田";
+echo "私は". $name . "です";
+echo "watashi".$name. "desu";

@@ -6,7 +6,6 @@ if($name == "tika") {
     echo "私はあなたの名前ではありません";
 }
 $total =1;
-echo $total;
 echo "\n";
 for ($i = 1; $i <= 10000; $i++) {
     $total += $i;
