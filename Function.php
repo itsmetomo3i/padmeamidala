@@ -1,5 +1,7 @@
 <?php
 
+//課題
+
 //1.引数に数値を指定して実行すると、数値を2倍にして返す関数を作成してください
 
 function sum ($num){
@@ -42,3 +44,34 @@ $max_number = $arr[0];
 return $max_number;
 }
 echo max_array($arr);
+
+//5.次のビルトイン関数の用途、使い方を調べて実際に使ってみてください。
+//strip_tags,array_push,array_merge,time, mktime,date
+
+$str = "<h1>strip_tags関数</h1>"
+  . "<p>タグ取り除くよっ！</p>";
+echo strip_tags($str) ."\n";
+
+$members = array("一郎","二郎","三郎");
+            array_push($members,"四郎","五郎");
+            print_r($members);
+            echo $members;
+//配列を作成
+$array1 = ['apple','orange','mikan'];
+$array2 = ['ichigo', 'cherry', 'suika'];
+$array3 = ['squid','dolphin','urchin'];
+ 
+//配列を結合する
+$fruit_merge = array_merge($array1, $array2, $array3);
+print_r($fruit_merge);
+echo ($fruit_merge);
+echo "\n";
+
+//指定した日時のタイムスタンプを取得
+$timestamp = mktime(0, 0, 0, 8, 1, 2017);
+echo $timestamp;
+echo "\n";
+echo 'now'.time() ."\n";
+//Timezoneを設定する
+date_default_timezone_set('Asia/Tokyo');
+echo date("Y/m/d H:i:s") . "\n";
