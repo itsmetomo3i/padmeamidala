@@ -21,7 +21,7 @@ Route::group(['prefix' => 'admin'], function() {
      Route::get('/XXX', 'AAAController@bbb');
      
 //【応用】 前章でAdmin/ProfileControllerを作成し、add Action, edit Actionを追加しました。web.phpを編集して、admin/profile/create にアクセスしたら ProfileController の add Action に、admin/profile/edit にアクセスしたら ProfileController の edit Action に割り当てるように設定してください。
-     Route::get('news/admin/profile/create', 'Admin\ProfileController@edit');
+     Route::get('profile/create', 'Admin\ProfileController@edit');
     
     
 });
