@@ -3,14 +3,14 @@
 
 
 {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
-@section('title', 'マイニュース作成画面')
+@section('title', 'マイプロフィール')
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>Myニュース</h2>
+                <h2>Myプロファイル作成</h2>
             </div>
         </div>
     </div>
@@ -22,9 +22,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>MyNews</title>
+        <title>My Profile</title>
     </head>
     <body>
-        <h1>Myニュース作成画面</h1>
+        <h1>Myプロファイル作成画面</h1>
     </body>
 </html>
