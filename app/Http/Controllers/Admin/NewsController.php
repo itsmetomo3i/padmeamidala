@@ -5,10 +5,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\News;
+use App\History;
+use Carbon\Carbon;
 
 class NewsController extends Controller
 {
-  // 以下を追記
   public function add()
   {
       return view('admin.news.create');
@@ -83,7 +84,11 @@ public function edit(Request $request)
 
       // 該当するデータを上書きして保存する
       $news->fill($news_form)->save();
-      return redirect('admin/news');
+      $history = new History;
+      $history->news_id = $news->id;
+      $history->edited_at = Carbon::now();
+      $history->save();
+        return redirect('admin/news');
   }
   public function delete(Request $request)
   {
@@ -91,6 +96,6 @@ public function edit(Request $request)
       $news = News::find($request->id);
       // 削除する
       $news->delete();
-      return redirect('admin/news/');
+      return redirect('admin/news');
   }  
 }
